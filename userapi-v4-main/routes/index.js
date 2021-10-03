@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const controllersAuth = require('../controllers/auth');
+const controllersAuth = require('../controllers/mysql');
 
 router.get('/login', controllersAuth.login);
 router.post('/register', controllersAuth.register);

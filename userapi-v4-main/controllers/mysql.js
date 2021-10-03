@@ -1,6 +1,6 @@
 "use strict"
 const uuid = require('uuid');
-const runQuery = require('../database/mysql')
+const runQuery = require('../database/runquery')
 const logger = require('../js/event');
 
 async function check(token) {
