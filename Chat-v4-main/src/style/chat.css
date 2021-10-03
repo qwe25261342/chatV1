@@ -1,0 +1,104 @@
+.hello h1 {
+    width: 1100px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+  .onlinebox{
+    display: flex;
+  }
+  .chatcontainer {
+    background-color: aliceblue;
+    height: 100%;
+    min-height: 777px;
+    margin-bottom: 48px;
+    padding: 0;
+    margin-top: 100px;
+  }
+  .chatcontainer ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .chatcontainer li {
+    list-style: none;
+  }
+  
+  .chatcontainer .list {
+    height: 100%;
+    padding: 0 10px;
+  }
+  
+  .container .bottom {
+    width: 1100px;
+    position: fixed;
+    bottom: 0;
+  }
+  .container .line {
+    width: 1100px;
+    height: 1px;
+    background-color: #ddd;
+  }
+  
+  .container .input-send {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+  }
+  .container .input-send .input {
+    padding-right: 10px;
+  }
+  
+  .container .input-send .send {
+    width: 80px;
+    height: 30px;
+    margin-top: 7px;
+    margin-right: 10px;
+  }
+  .searchbox {
+    display: flex;
+  }
+  
+  .searchbox .searchinput {
+    height: 30px;
+    padding: 3px 5px;
+  }
+  .searchbox .btn {
+    width: 30%;
+    height: 30px;
+    padding: 0 5px;
+    margin-left: 10px;
+  }
+  .el-icon-emoji {
+    width: 50px;
+    height: 90%;
+    line-height: 48px;
+    background: url("../assets/emoji.png") center no-repeat;
+    cursor: pointer;
+  }
+  .el-icon-emoji:before {
+    content: "\e75e";
+    font-size: 14px;
+    visibility: hidden;
+  }
+  .el-icon-picture-outline {
+    margin-left: 5px;
+    font-size: 225%;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .input-send img {
+    vertical-align: middle;
+    position: absolute;
+    bottom: 48px;
+    right: 0;
+  }
+  .input-send .imgsend {
+    vertical-align: middle;
+    position: absolute;
+    bottom: 215px;
+    right: 0;
+  }
