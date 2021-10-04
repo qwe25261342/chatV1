@@ -90,10 +90,10 @@ exports.message = async (req, res) => {
   try {
     const req_params = req.body.params
     const content = req_params.content
-    const token = req_params.token
     const img = req_params.img
     const created_at = new Date()
-    const { sender_id } = await check(token)
+    const req_userId = req.user_id[0].user_id;
+    const sender_id = req_userId
     const { username } = await getuser(sender_id)
     const sql = 'insert into messages(content, sender_id, created_at, username,img) VALUES( ?, ?, ?, ?, ? )'
     const params = [content, sender_id, created_at, username, img]
@@ -104,13 +104,16 @@ exports.message = async (req, res) => {
     }
     res.send({ sender_id, username })
   } catch (error) {
+    console.log(error);
     res.send({
       success: false
+
     })
   }
 }
 //進入頁面取得之前所有的訊息
 exports.allmessage = async (req, res) => {
+  
   try {
     //防止沒token 直接取聊天紀錄
     const req_params = req.body.params

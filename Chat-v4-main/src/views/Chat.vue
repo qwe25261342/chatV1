@@ -145,7 +145,7 @@ export default {
         return false;
       }
       axios
-        .post( appApi + "/message", { params })
+        .post( appApi + "/token/message", { params })
         .then((res) => {
           console.log(res.data);
           if (res.data.success == false) {
@@ -168,7 +168,7 @@ export default {
         .then((res) => {
           if (res.data.length == 0) {
             axios
-              .post( appApi + "/allmessage", { params })
+              .post( appApi + "/token/allmessage", { params })
               .then((res) => {
                 this.msgList = res.data;
                 this.searchText = "";
@@ -232,7 +232,7 @@ export default {
       });
     //登入時取所有聊天資料
     axios
-      .post( appApi + "/allmessage", { params })
+      .post( appApi + "/token/allmessage", { params })
       .then((res) => {
         this.msgList = res.data;
       });
@@ -253,7 +253,7 @@ export default {
     //發送訊息&圖片 接收socket通知 去資料庫取得所有資料
     socket.on("receive-msg", () => {
       axios
-        .post( appApi + "/allmessage", { params })
+        .post( appApi + "/token/allmessage", { params })
         .then((res) => {
           this.msgList = res.data;
         });
